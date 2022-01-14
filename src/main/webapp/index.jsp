@@ -1,3 +1,4 @@
+<%@page import="java.util.Scanner"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
 <body>
 <h1>Primeira página JSP</h1>
 
-<!-- Codigo Java -->
+<!-- Codigo Java parte 1 da atividade-->
 <%! boolean formatar = true; %>
 <%!
 	String today(){
@@ -26,6 +27,30 @@
 						out.println(new java.util.Date());	
 						}
 					  %></h1>
+
+<!-- Codigo Java parte 2 da ativdade -->					  
+<%! 
+	double num1 = 2;
+	double num2 = 3;
+	double resultado;
+%>					  
+
+<%!
+	void divisaoExata(double num1, double num2){
+	resultado = num2 / num1;
+	}
+%>
+					  
+<%
+if (num2 % num1 == 0){
+	out.println(" A divisao de "+num2+ "/"+num1+ " é uma divisão exata");		
+	}else{
+	out.println(" A divisao de "+num2+ "/"+num1+ " não é uma divisão exata");	
+	}
+%>
+
+<!-- Parte 3 da atividade -->
+
 
 </body>
 </html>
