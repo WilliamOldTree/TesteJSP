@@ -1,3 +1,4 @@
+<%@page import="java.util.Calendar"%>
 <%@page import="java.util.Scanner"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -41,16 +42,42 @@
 	}
 %>
 					  
-<%
-if (num2 % num1 == 0){
-	out.println(" A divisao de "+num2+ "/"+num1+ " é uma divisão exata");		
-	}else{
-	out.println(" A divisao de "+num2+ "/"+num1+ " não é uma divisão exata");	
-	}
-%>
+<h1> <%
+	if (num2 % num1 == 0){
+		out.println(" A divisao de "+num2+ "/"+num1+ " é uma divisão exata");		
+		}else{
+		out.println(" A divisao de "+num2+ "/"+num1+ " não é uma divisão exata");	
+		}
+%> </h1>
+
+
 
 <!-- Parte 3 da atividade -->
 
 
+ <%! Calendar cal = Calendar.getInstance(); %> 
+ 
+ <%! Integer segundos(){
+ 	
+ 	return cal.get(Calendar.SECOND); 
+ }
+ %>
+ 
+ 
+ <h1> <%
+ 	if (segundos()%2 == 0){
+ 		out.println(" Segundo par");
+ 	}else{
+ 		out.println(" Segundo impar");
+ 	}
+ %> </h1>
+
+ 
+<h1> <%=
+	segundos() 	
+ %> </h1>
+
+
 </body>
+
 </html>
